@@ -1,6 +1,7 @@
 dependsOn(':groovy')
 
-hello.doLast {
-    println "Java"
-}
+apply plugin: 'java'
 
+dependencies {
+    compile project(':groovy')
+}

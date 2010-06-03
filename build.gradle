@@ -1,17 +1,10 @@
-version = 1.0
-childrenDependOnMe()
-
-allprojects {
-    task hello << {Task task ->
-        println "Hello, I'm $task.project.name"
-    }
+subprojects {
+	repositories {
+		mavenCentral()
+		mavenRepo urls: 'http://scala-tools.org/repo-releases/'
+	}
+	apply plugin: 'eclipse'
+	apply plugin: 'announce'
+	group = 'com.synergyj.gradle'
+	version = '1.0'
 }
-
-subprojects*.hello*.doLast {
-    println 'I love water.'
-}
-
-hello << {
-    println 'As you all know, I cover three quarters of this planet!'
-}
-    

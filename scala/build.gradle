@@ -1,6 +1,14 @@
 dependsOn(':java')
 
-hello.doLast {
-    println "Scala"
-}
+apply plugin: 'scala'
 
+dependencies {
+    // Libraries needed to run the scala tools
+    scalaTools 'org.scala-lang:scala-compiler:2.8.0.RC3'
+    scalaTools 'org.scala-lang:scala-library:2.8.0.RC3'
+
+    // Libraries needed for scala api
+    compile 'org.scala-lang:scala-library:2.8.0.RC3'
+
+	compile project(':java')
+}
