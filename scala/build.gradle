@@ -1,0 +1,6 @@
+dependsOn(':java')
+
+hello.doLast {
+    println "Scala"
+}
+

@@ -1,0 +1,6 @@
+dependsOn(':groovy')
+
+hello.doLast {
+    println "Java"
+}
+
