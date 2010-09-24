@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+    "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
+    "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+
+
+<module name="Checker">
+	<!-- Checks that a package-info.java file exists for each package.     -->
+	    <!-- See http://checkstyle.sf.net/config_javadoc.html#JavadocPackage -->
+	<!--
+	    <module name="JavadocPackage"/>
+    -->
+    <!-- Checks for Size Violations.                    -->
+    <!-- See http://checkstyle.sf.net/config_sizes.html -->
+    <module name="FileLength"/>
+
+    <module name="TreeWalker">
+
+    </module>
+
+</module>

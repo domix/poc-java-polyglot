@@ -6,6 +6,9 @@ subprojects {
 		mavenRepo urls: 'http://scala-tools.org/repo-releases/'
 	}
 	apply plugin: 'eclipse'
+	apply plugin: 'idea'
+	apply plugin: 'code-quality'
+	apply plugin: 'project-report'
 	group = 'com.synergyj.gradle'
 	version = '1.0'
 	defaultTasks 'assemble'
