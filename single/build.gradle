@@ -1,24 +1,27 @@
+//Default task, build the Jar file
+defaultTasks 'assemble'
+
 group = 'com.synergyj.gradle'
 version = '1.0'
 
+//Podemos usar repositorios de Maven
 repositories {
 	mavenCentral()
 	mavenRepo urls: 'http://scala-tools.org/repo-releases/'
+	mavenRepo urls: 'http://download.java.net/maven/2/'
 }
 
-apply plugin: 'eclipse'
-apply plugin: 'groovy'
-apply plugin: 'java'
+//Este proyecto usa Scala, asi que podemos aplicar el plugin de Scala para compilar código
 apply plugin: 'scala'
 
+//Agregamos dependencias
 dependencies {
-    groovy group: 'org.codehaus.groovy', name: 'groovy-all', version: '1.7.2'
-    testCompile group: 'junit', name: 'junit', version: '4.7'
-
 	// Libraries needed to run the scala tools
-    scalaTools 'org.scala-lang:scala-compiler:2.8.0.RC3'
-    scalaTools 'org.scala-lang:scala-library:2.8.0.RC3'
+    scalaTools 'org.scala-lang:scala-compiler:2.7.7'
+    scalaTools 'org.scala-lang:scala-library:2.7.7'
 
     // Libraries needed for scala api
-    compile 'org.scala-lang:scala-library:2.8.0.RC3'
+    compile 'org.scala-lang:scala-library:2.7.7'
+	compile 'org.atmosphere:atmosphere-runtime:0.5.8'
+	compile 'org.atmosphere:atmosphere-jersey:0.5.8'
 }

@@ -1,10 +1,12 @@
+defaultTasks 'assemble'
+
 subprojects {
 	repositories {
 		mavenCentral()
 		mavenRepo urls: 'http://scala-tools.org/repo-releases/'
 	}
 	apply plugin: 'eclipse'
-	apply plugin: 'announce'
 	group = 'com.synergyj.gradle'
 	version = '1.0'
+	defaultTasks 'assemble'
 }
